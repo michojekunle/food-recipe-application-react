@@ -159,3 +159,18 @@ h1 {
   color: #40b48e;
   font-size: 1.3rem;
 }
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+    text-shadow: 0 0.2rem 3rem rgb(119, 115, 115);
+    margin: 2rem 0;
+  }
+  
+  .search-form {
+    width: 32rem;
+    height: 8rem;
+    margin-bottom: 3rem;
+    box-shadow: 1rem 2rem 3rem #aaa;
+  } 
+}
