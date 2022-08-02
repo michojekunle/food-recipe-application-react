@@ -162,15 +162,48 @@ h1 {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
+    text-align: center;
+  }
+  
+  .search-form {
+    width: 40rem;
+    height: 8rem;
+  } 
+}
+
+@media screen and (max-width:550px) {
+  h1 {
+    font-size: 4rem;
+  }
+  
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    top: 10rem;
+    font-size: 3rem;
     text-shadow: 0 0.2rem 3rem rgb(119, 115, 115);
     margin: 2rem 0;
   }
   
   .search-form {
-    width: 32rem;
-    height: 8rem;
+    width: 20rem;
+    height: 6rem;
     margin-bottom: 3rem;
     box-shadow: 1rem 2rem 3rem #aaa;
   } 
+
+  .search-form input {
+    font-size: 1.3rem;
+    margin: 0 0.2rem;
+    border-radius: 0.3rem;
+    height: 2rem;
+  }
+  
+  .search-form input[type="text"] {
+    padding: 0 0.2rem;
+  }
+  
+  
 }
