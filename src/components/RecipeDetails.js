@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { v4 } from 'uuid';
 
-const RecipeDetails = () => {
+const RecipeDetails = ({ ingredients }) => {
   return (
-    <div>\
+    <div>
         
     </div>
   )
