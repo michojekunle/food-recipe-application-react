@@ -4,11 +4,13 @@ import { v4 as uuidv4} from 'uuid';
 import Recipe from './components/Recipe';
 import './App.css'
 import Alert from './components/Alert';
+import Ripples from './components/Ripples';
 
 const App = () => {
   const [query, setQuery] = useState('');
   const [recipes, setRecipes] = useState([]);
   const [alert, setAlert] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const API_ID = "11936026";
   const API_KEY = "d07d03f53faf66beafc06604b25f4980";
@@ -17,6 +19,7 @@ const App = () => {
   const getData = async () => {
 
     if (query !== "") {
+      setLoading(true);
       const result = await Axios.get(API_URL);
       
       if (result.data.count < 1) {
@@ -27,6 +30,7 @@ const App = () => {
       console.log(result);
       setAlert("")
       setQuery('')
+      setLoading(false);
     } else {
       setAlert("please fill the form");
     }
@@ -53,6 +57,9 @@ const App = () => {
         <input type='submit' value='Search' /> 
       </form>
 
+      {
+        loading && <Ripples />
+      }
       <div key={uuidv4()} className="recipes">
         {recipes !== [] && recipes.map(recipe => <Recipe  recipe={recipe}/>)}
       </div>
