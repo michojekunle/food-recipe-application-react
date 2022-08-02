@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
+// import { v4 as uuidv4} from 'uuid';
+import Recipe from './components/Recipe';
 import './App.css'
 
 const App = () => {
@@ -36,10 +38,10 @@ const App = () => {
         <input type='text' className='' placeholder='Search Food' autoComplete='off' onChange={onChange} value={query} />
         <input type='submit' value='Search' /> 
       </form>
-      
-      {/* <div className="recipes">
-        <h1>{recipes}</h1>
-      </div> */}
+
+      <div className="recipes">
+        {recipes !== [] && recipes.map(recipe => <Recipe  recipe={recipe}/>)}
+      </div>
     </div>
   )
 }
