@@ -80,6 +80,7 @@ h1 {
   text-transform: uppercase;
   background-color: #40b48e;
   color: #fff;
+  cursor: pointer;
 }
 
 .recipes {
@@ -135,6 +136,7 @@ h1 {
   border: none;
   border-radius: 0.5rem;
   height: 3rem;
+  cursor: pointer;
 }
 
 .ingredient-list {
